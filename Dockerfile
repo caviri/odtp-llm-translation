@@ -1,12 +1,12 @@
 FROM ubuntu:22.04
 
-LABEL maintainer="Your Name <your.email@example.com>"
+LABEL maintainer="Carlos Vivar Rios <carlosvivarrios@gmail.com>"
 LABEL version="v0.0.1"
-LABEL description="ODTP component based on Ubuntu 22.04"
-LABEL org.opencontainers.image.title="ODTP Component"
-LABEL org.opencontainers.image.vendor="Your Organization"
-LABEL org.opencontainers.image.source="https://github.com/your-org/your-repo"
-LABEL org.opencontainers.image.licenses="XXX"
+LABEL description="ODTP component for LMM-based translations"
+LABEL org.opencontainers.image.title="odtp-llm-translation"
+LABEL org.opencontainers.image.vendor="caviri"
+LABEL org.opencontainers.image.source="https://github.com/caviri/odtp-llm-translation"
+LABEL org.opencontainers.image.licenses="BSD-3-Clause"
 
 ##################################################
 # Ubuntu setup
