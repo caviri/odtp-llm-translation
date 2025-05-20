@@ -73,33 +73,35 @@ odtp new odtp-component-entry \
 
  **TBD**
 
-| Parameter | Description | Type | Required | Default Value | Possible Values | Constraints |
-| --- | --- | --- | --- | --- | --- | --- |
-| A | B | C | D | E | F | G |
+| Parameter                  | Description                                         | Type    | Required | Default Value | Possible Values         | Constraints |
+|----------------------------|-----------------------------------------------------|---------|----------|---------------|------------------------|-------------|
+| MODEL_NAME                 | Name of the LLM model to use                        | string  | Yes      | -             | Model names supported  |             |
+| LANGUAGE                   | Target language for translation                     | string  | Yes      | -             | Any language           |             |
+| ENDPOINT                    | OpenAI-compatible API endpoint                      | string  | Yes      | -             | Valid URL              |             |
+| ODTP_API_MODE              | Enable API mode                                     | boolean | No       | FALSE         | TRUE, FALSE            |             |
+| ODTP_GRADIO_SHARE          | Enable Gradio share                                 | boolean | No       | FALSE         | TRUE, FALSE            |             |
+| TRANSFER_INPUT_TO_OUTPUT   | Copy input directly to output                       | boolean | No       | FALSE         | TRUE, FALSE            |             |
+| ODTP_SAVE_SNAPSHOT         | Save a snapshot of the process                      | boolean | No       | FALSE         | TRUE, FALSE            |             |
+| ODTP_SAVE_IN_RESULT        | Save translation in result                          | boolean | No       | TRUE          | TRUE, FALSE            |             |
+| ODTP_LOGS_IN_DB            | Store logs in database                              | boolean | No       | FALSE         | TRUE, FALSE            |             |
 
 ### Secrets
 
- **TBD**
-
-| Secret Name | Description | Type | Required | Default Value | Constraints | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| A | B | C | D | E | F | G |
+| Secret Name | Description                                 | Type   | Required | Default Value | Constraints | Notes                       |
+|-------------|---------------------------------------------|--------|----------|---------------|-------------|-----------------------------|
+| API_KEY     | API key for the OpenAI-compatible endpoint  | string | Yes      | -             | Valid key   | Do not share or commit this |
 
 ### Input Files
 
- **TBD**
-
-| File/Folder | Description | File Type | Required | Format | Notes |
-| --- | --- | --- | --- | --- | --- |
-| A | B | C | D | E | F |
+| File/Folder         | Description                | File Type | Required | Format         | Notes |
+|--------------------|----------------------------|-----------|----------|---------------|-------|
+| odtp-input/input.txt| Input text or JSON values  | text/json | Yes      | Plain/JSON     |       |
 
 ### Output Files
 
- **TBD**
-
-| File/Folder | Description | File Type | Contents | Usage |
-| --- | --- | --- | --- | --- |
-| A | B | C | D | E |
+| File/Folder          | Description                | File Type | Contents           | Usage |
+|---------------------|----------------------------|-----------|--------------------|-------|
+| odtp-output/output.txt | Translated output text or JSON | text/json | Translated content | Main result |
 
 ## Tutorial
 
@@ -169,4 +171,4 @@ odtp-llm-translation
 
 Carlos Vivar Rios
 
-This component has been created using the `odtp-component-template` `v0.5.0`. 
+This component has been created using the `odtp-component-template` `v0.5.0`.
